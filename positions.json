@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-06T11:26:00+08:00",
-  "note": "分注：第1注20%/$100，第2注50%/$250，第3注20%/$100，第4注10%/$50；做空为模拟卖空，不含手续费",
+  "updated_at": "2026-10-06T11:32:00+08:00",
+  "note": "注次按该币种该方向实际买入顺序：第1注20%/$100，第2注50%/$250，第3注20%/$100，第4注10%/$50；做空为模拟卖空，不含手续费",
   "open": [
     {
       "coin": "ADA",
@@ -21,12 +21,12 @@
       "coingecko_id": "monero",
       "direction": "做多",
       "signal": "入场2",
-      "tranche": 2,
-      "tranche_pct": "50%",
-      "amount_usd": 250,
+      "tranche": 1,
+      "tranche_pct": "20%",
+      "amount_usd": 100,
       "entry_date": "2026-10-05",
       "entry_price": 562.05,
-      "qty": 0.4448
+      "qty": 0.17792
     },
     {
       "coin": "XLM",
@@ -34,12 +34,12 @@
       "coingecko_id": "stellar",
       "direction": "做空",
       "signal": "空2",
-      "tranche": 2,
-      "tranche_pct": "50%",
-      "amount_usd": 250,
+      "tranche": 1,
+      "tranche_pct": "20%",
+      "amount_usd": 100,
       "entry_date": "2026-10-05",
       "entry_price": 0.2154,
-      "qty": 1160.631383
+      "qty": 464.252553
     },
     {
       "coin": "LTC",
@@ -47,12 +47,12 @@
       "coingecko_id": "litecoin",
       "direction": "做空",
       "signal": "空2",
-      "tranche": 2,
-      "tranche_pct": "50%",
-      "amount_usd": 250,
+      "tranche": 1,
+      "tranche_pct": "20%",
+      "amount_usd": 100,
       "entry_date": "2026-10-05",
       "entry_price": 70.1,
-      "qty": 3.566334
+      "qty": 1.426534
     }
   ],
   "closed": []
