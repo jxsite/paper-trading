@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Livermore 策略模拟盘</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; background: #0d1421; color: #e8ecf3; padding: 16px; max-width: 1100px; margin: 0 auto; }
+  header { margin-bottom: 18px; }
+  h1 { font-size: 22px; margin-bottom: 6px; }
+  .sub { color: #8b94a7; font-size: 13px; margin-bottom: 6px; }
+  .meta { color: #8b94a7; font-size: 12px; }
+  .meta button { background: #1c2740; color: #e8ecf3; border: 1px solid #2c3a5c; border-radius: 6px; padding: 4px 10px; font-size: 12px; cursor: pointer; margin-left: 8px; }
+  .meta button:hover { background: #263354; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-bottom: 20px; }
+  .card { background: #141d31; border: 1px solid #223052; border-radius: 10px; padding: 12px 14px; }
+  .card .label { font-size: 12px; color: #8b94a7; margin-bottom: 4px; }
+  .card .value { font-size: 20px; font-weight: 700; }
+  h2 { font-size: 17px; margin: 18px 0 10px; }
+  .table-wrap { overflow-x: auto; background: #141d31; border: 1px solid #223052; border-radius: 10px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 760px; }
+  th, td { padding: 9px 10px; text-align: left; border-bottom: 1px solid #1e2a47; white-space: nowrap; }
+  th { color: #8b94a7; font-weight: 500; font-size: 12px; }
+  tr:last-child td { border-bottom: none; }
+  .pos { color: #16c784; font-weight: 600; }
+  .neg { color: #ea3943; font-weight: 600; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+  .badge.long { background: rgba(22,199,132,.15); color: #16c784; }
+  .badge.short { background: rgba(234,57,67,.15); color: #ea3943; }
+  .empty { padding: 18px; text-align: center; color: #8b94a7; font-size: 13px; }
+  footer { margin-top: 22px; color: #6b7488; font-size: 12px; line-height: 1.8; }
+  .err { color: #ea3943; }
+</style>
+</head>
+<body>
+<header>
+  <h1>📒 Livermore 策略模拟盘</h1>
+  <p class="sub">信号来自每日 Livermore 12% / 6% 扫描 · 每个入场信号开一笔 $100 模拟仓 · 做空为模拟卖空 · 不含手续费</p>
+  <p class="meta">持仓数据更新：<span id="updatedAt">—</span> · 价格更新：<span id="priceTime">—</span><button id="refreshBtn">⟳ 刷新价格</button></p>
+</header>
+
+<section class="cards" id="summaryCards"></section>
+
+<h2>持仓中 (<span id="openCount">0</span>)</h2>
+<div class="table-wrap">
+  <table>
+    <thead><tr>
+      <th>币种</th><th>方向</th><th>信号</th><th>入场日期</th><th>入场价</th><th>数量</th>
+      <th>现价</th><th>持仓天数</th><th>未实现盈亏($)</th><th>未实现盈亏(%)</th>
+    </tr></thead>
+    <tbody id="openBody"></tbody>
+  </table>
+</div>
+
+<h2>已平仓 (<span id="closedCount">0</span>)</h2>
+<div class="table-wrap">
+  <table>
+    <thead><tr>
+      <th>币种</th><th>方向</th><th>信号</th><th>入场日期</th><th>入场价</th>
+      <th>出场日期</th><th>出场价</th><th>出场原因</th><th>已实现盈亏($)</th><th>已实现盈亏(%)</th>
+    </tr></thead>
+    <tbody id="closedBody"></tbody>
+  </table>
+</div>
+
+<footer>
+  <p>· 做多盈亏 = (现价 − 入场价) × 数量；做空盈亏 = (入场价 − 现价) × 数量；盈亏% 以每笔 $100 本金计。</p>
+  <p>· 持仓与出场由每日早报扫描自动维护；价格每 5 分钟自动刷新，数据来源 CoinGecko。</p>
+  <p>· 本页为策略跟踪模拟记录，不构成投资建议。</p>
+</footer>
+
+<script>
+const fmt$ = n => (n >= 0 ? '+' : '') + n.toFixed(2);
+const fmtPct = n => (n >= 0 ? '+' : '') + n.toFixed(2) + '%';
+const cls = n => n >= 0 ? 'pos' : 'neg';
+const badge = d => d === '做多' ? '<span class="badge long">做多</span>' : '<span class="badge short">做空</span>';
+const daysHeld = d => Math.max(0, Math.round((Date.now() - new Date(d + 'T00:00:00Z').getTime()) / 86400000));
+
+let POS = null;
+
+async function fetchPrices(ids) {
+  if (!ids.length) return {};
+  const r = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=' + ids.join(',') + '&vs_currencies=usd');
+  if (!r.ok) throw new Error('price fetch failed');
+  return r.json();
+}
+
+function pnlOf(p, cur) {
+  const diff = p.direction === '做多' ? (cur - p.entry_price) : (p.entry_price - cur);
+  const usd = diff * p.qty;
+  return { usd, pct: usd / 100 * 100 };
+}
+
+function render(prices) {
+  const open = POS.open || [], closed = POS.closed || [];
+  document.getElementById('openCount').textContent = open.length;
+  document.getElementById('closedCount').textContent = closed.length;
+
+  let unreal = 0;
+  const ob = document.getElementById('openBody');
+  if (!open.length) {
+    ob.innerHTML = '<tr><td colspan="10"><div class="empty">暂无持仓</div></td></tr>';
+  } else {
+    ob.innerHTML = open.map(p => {
+      const px = prices[p.coingecko_id];
+      const cur = px ? px.usd : null;
+      let pnlHtml = '<span class="err">价格获取失败</span>', pctHtml = '—';
+      if (cur !== null && cur !== undefined) {
+        const { usd, pct } = pnlOf(p, cur);
+        unreal += usd;
+        pnlHtml = `<span class="${cls(usd)}">${fmt$(usd)}</span>`;
+        pctHtml = `<span class="${cls(pct)}">${fmtPct(pct)}</span>`;
+      }
+      return `<tr>
+        <td><b>${p.coin}</b> <span style="color:#8b94a7">${p.name || ''}</span></td>
+        <td>${badge(p.direction)}</td><td>${p.signal}</td><td>${p.entry_date}</td>
+        <td>${p.entry_price}</td><td>${p.qty}</td>
+        <td>${cur !== null && cur !== undefined ? cur : '—'}</td>
+        <td>${daysHeld(p.entry_date)} 天</td>
+        <td>${pnlHtml}</td><td>${pctHtml}</td>
+      </tr>`;
+    }).join('');
+  }
+
+  let realized = 0, wins = 0;
+  const cb = document.getElementById('closedBody');
+  if (!closed.length) {
+    cb.innerHTML = '<tr><td colspan="10"><div class="empty">暂无已平仓记录</div></td></tr>';
+  } else {
+    cb.innerHTML = closed.map(p => {
+      realized += p.pnl_usd;
+      if (p.pnl_usd > 0) wins++;
+      return `<tr>
+        <td><b>${p.coin}</b> <span style="color:#8b94a7">${p.name || ''}</span></td>
+        <td>${badge(p.direction)}</td><td>${p.signal}</td><td>${p.entry_date}</td><td>${p.entry_price}</td>
+        <td>${p.exit_date}</td><td>${p.exit_price}</td><td>${p.exit_reason}</td>
+        <td><span class="${cls(p.pnl_usd)}">${fmt$(p.pnl_usd)}</span></td>
+        <td><span class="${cls(p.pnl_pct)}">${fmtPct(p.pnl_pct)}</span></td>
+      </tr>`;
+    }).join('');
+  }
+
+  const total = unreal + realized;
+  const winRate = closed.length ? (wins / closed.length * 100).toFixed(1) + '%' : '—';
+  const cards = [
+    ['持仓数量', open.length + ' 笔', ''],
+    ['未实现盈亏', '$' + fmt$(unreal), cls(unreal)],
+    ['已实现盈亏', '$' + fmt$(realized), cls(realized)],
+    ['总盈亏', '$' + fmt$(total), cls(total)],
+    ['胜率（已平仓）', winRate, ''],
+  ];
+  document.getElementById('summaryCards').innerHTML = cards.map(([l, v, c]) =>
+    `<div class="card"><div class="label">${l}</div><div class="value ${c}">${v}</div></div>`).join('');
+}
+
+async function load() {
+  try {
+    const r = await fetch('positions.json?t=' + Date.now());
+    POS = await r.json();
+    document.getElementById('updatedAt').textContent = POS.updated_at || '—';
+  } catch (e) {
+    document.getElementById('openBody').innerHTML = '<tr><td colspan="10"><div class="empty err">持仓数据加载失败</div></td></tr>';
+    return;
+  }
+  const ids = [...new Set((POS.open || []).map(p => p.coingecko_id))];
+  let prices = {};
+  try {
+    prices = await fetchPrices(ids);
+    document.getElementById('priceTime').textContent = new Date().toLocaleString('zh-CN', { hour12: false });
+  } catch (e) {
+    document.getElementById('priceTime').innerHTML = '<span class="err">获取失败</span>';
+  }
+  render(prices);
+}
+
+document.getElementById('refreshBtn').addEventListener('click', load);
+load();
+setInterval(load, 5 * 60 * 1000);
+</script>
+</body>
+</html>

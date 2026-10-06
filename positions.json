@@ -1,0 +1,47 @@
+{
+  "updated_at": "2026-10-06T08:44:43+08:00",
+  "note": "每个入场信号一笔 $100 模拟仓，做空为模拟卖空，不含手续费",
+  "open": [
+    {
+      "coin": "ADA",
+      "name": "Cardano",
+      "coingecko_id": "cardano",
+      "direction": "做多",
+      "signal": "入场1",
+      "entry_date": "2026-10-05",
+      "entry_price": 0.2705,
+      "qty": 369.685767
+    },
+    {
+      "coin": "XMR",
+      "name": "Monero",
+      "coingecko_id": "monero",
+      "direction": "做多",
+      "signal": "入场2",
+      "entry_date": "2026-10-05",
+      "entry_price": 562.05,
+      "qty": 0.17792
+    },
+    {
+      "coin": "XLM",
+      "name": "Stellar",
+      "coingecko_id": "stellar",
+      "direction": "做空",
+      "signal": "空2",
+      "entry_date": "2026-10-05",
+      "entry_price": 0.2154,
+      "qty": 464.252553
+    },
+    {
+      "coin": "LTC",
+      "name": "Litecoin",
+      "coingecko_id": "litecoin",
+      "direction": "做空",
+      "signal": "空2",
+      "entry_date": "2026-10-05",
+      "entry_price": 70.1,
+      "qty": 1.426534
+    }
+  ],
+  "closed": []
+}
