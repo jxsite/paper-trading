@@ -133,7 +133,7 @@ function render(prices) {
         pctCell = `<span class="${cls(pct)}">${fmtPct(pct)}</span>`;
       }
       return `<div class="pcard">
-        <div class="phead"><div><b>${p.coin}</b><span class="cname">${p.name || ''}</span>${badge(p.direction)}</div><div class="pnl">${pnlTop}</div></div>
+        <div class="phead"><div><b>${p.coin.toUpperCase()}</b><span class="cname">${p.name || ''}</span>${badge(p.direction)}</div><div class="pnl">${pnlTop}</div></div>
         <div class="tline">${trancheLine(p)}</div>
         <div class="pgrid">
           <div><i>入场</i>${p.entry_date.slice(5)} @ ${p.entry_price}</div>
@@ -155,7 +155,7 @@ function render(prices) {
       realized += p.pnl_usd;
       if (p.pnl_usd > 0) wins++;
       return `<div class="pcard">
-        <div class="phead"><div><b>${p.coin}</b><span class="cname">${p.name || ''}</span>${badge(p.direction)}</div>
+        <div class="phead"><div><b>${p.coin.toUpperCase()}</b><span class="cname">${p.name || ''}</span>${badge(p.direction)}</div>
         <div class="pnl"><span class="${cls(p.pnl_usd)}">${fmt$(p.pnl_usd)}</span></div></div>
         <div class="tline">${trancheLine(p)} · ${p.exit_reason}</div>
         <div class="pgrid">

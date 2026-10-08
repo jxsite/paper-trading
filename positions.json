@@ -1,22 +1,9 @@
 {
-  "updated_at": "2026-10-07T00:21:31.126602+00:00",
+  "updated_at": "2026-10-08T00:18:30.832319+00:00",
   "note": "注次按该币种该方向实际买入顺序：第1注20%/$100，第2注50%/$250，第3注20%/$100，第4注10%/$50；做空为模拟卖空，不含手续费",
   "open": [
     {
-      "coin": "ADA",
-      "name": "Cardano",
-      "coingecko_id": "cardano",
-      "direction": "做多",
-      "signal": "入场1",
-      "tranche": 1,
-      "tranche_pct": "20%",
-      "amount_usd": 100,
-      "entry_date": "2026-10-05",
-      "entry_price": 0.2705,
-      "qty": 369.685767
-    },
-    {
-      "coin": "XMR",
+      "coin": "xmr",
       "name": "Monero",
       "coingecko_id": "monero",
       "direction": "做多",
@@ -29,7 +16,7 @@
       "qty": 0.17792
     },
     {
-      "coin": "XLM",
+      "coin": "xlm",
       "name": "Stellar",
       "coingecko_id": "stellar",
       "direction": "做空",
@@ -42,7 +29,7 @@
       "qty": 464.252553
     },
     {
-      "coin": "LTC",
+      "coin": "ltc",
       "name": "Litecoin",
       "coingecko_id": "litecoin",
       "direction": "做空",
@@ -55,20 +42,7 @@
       "qty": 1.426534
     },
     {
-      "coin": "NEAR",
-      "name": "NEAR Protocol",
-      "coingecko_id": "near",
-      "direction": "做空",
-      "signal": "空2",
-      "tranche": 1,
-      "tranche_pct": "20%",
-      "amount_usd": 100.0,
-      "entry_date": "2026-10-06",
-      "entry_price": 5.0723,
-      "qty": 19.714922
-    },
-    {
-      "coin": "BCH",
+      "coin": "bch",
       "name": "Bitcoin Cash",
       "coingecko_id": "bitcoin-cash",
       "direction": "做空",
@@ -79,7 +53,200 @@
       "entry_date": "2026-10-06",
       "entry_price": 311.92,
       "qty": 0.320595
+    },
+    {
+      "coin": "eth",
+      "name": "Ethereum",
+      "coingecko_id": "ethereum",
+      "direction": "做空",
+      "signal": "空1",
+      "tranche": 1,
+      "tranche_pct": "20%",
+      "amount_usd": 100.0,
+      "entry_date": "2026-10-07",
+      "entry_price": 2572.75,
+      "qty": 0.038869
+    },
+    {
+      "coin": "xrp",
+      "name": "XRP",
+      "coingecko_id": "ripple",
+      "direction": "做空",
+      "signal": "空1",
+      "tranche": 1,
+      "tranche_pct": "20%",
+      "amount_usd": 100.0,
+      "entry_date": "2026-10-07",
+      "entry_price": 1.42082,
+      "qty": 70.381892
+    },
+    {
+      "coin": "sol",
+      "name": "Solana",
+      "coingecko_id": "solana",
+      "direction": "做空",
+      "signal": "空1",
+      "tranche": 1,
+      "tranche_pct": "20%",
+      "amount_usd": 100.0,
+      "entry_date": "2026-10-07",
+      "entry_price": 116.25,
+      "qty": 0.860215
+    },
+    {
+      "coin": "doge",
+      "name": "Dogecoin",
+      "coingecko_id": "dogecoin",
+      "direction": "做空",
+      "signal": "空1",
+      "tranche": 1,
+      "tranche_pct": "20%",
+      "amount_usd": 100.0,
+      "entry_date": "2026-10-07",
+      "entry_price": 0.0889862,
+      "qty": 1123.769753
+    },
+    {
+      "coin": "ada",
+      "name": "Cardano",
+      "coingecko_id": "cardano",
+      "direction": "做空",
+      "signal": "空2",
+      "tranche": 1,
+      "tranche_pct": "20%",
+      "amount_usd": 100.0,
+      "entry_date": "2026-10-07",
+      "entry_price": 0.255621,
+      "qty": 391.204166
+    },
+    {
+      "coin": "xlm",
+      "name": "Stellar",
+      "coingecko_id": "stellar",
+      "direction": "做空",
+      "signal": "空1",
+      "tranche": 2,
+      "tranche_pct": "50%",
+      "amount_usd": 250.0,
+      "entry_date": "2026-10-07",
+      "entry_price": 0.200311,
+      "qty": 1248.059268
+    },
+    {
+      "coin": "ltc",
+      "name": "Litecoin",
+      "coingecko_id": "litecoin",
+      "direction": "做空",
+      "signal": "空2",
+      "tranche": 2,
+      "tranche_pct": "50%",
+      "amount_usd": 250.0,
+      "entry_date": "2026-10-07",
+      "entry_price": 66.08,
+      "qty": 3.783293
+    },
+    {
+      "coin": "uni",
+      "name": "Uniswap",
+      "coingecko_id": "uniswap",
+      "direction": "做空",
+      "signal": "空1",
+      "tranche": 1,
+      "tranche_pct": "20%",
+      "amount_usd": 100.0,
+      "entry_date": "2026-10-07",
+      "entry_price": 7.9074,
+      "qty": 12.646382
+    },
+    {
+      "coin": "avax",
+      "name": "Avalanche",
+      "coingecko_id": "avalanche-2",
+      "direction": "做空",
+      "signal": "空2",
+      "tranche": 1,
+      "tranche_pct": "20%",
+      "amount_usd": 100.0,
+      "entry_date": "2026-10-07",
+      "entry_price": 11.129,
+      "qty": 8.985533
+    },
+    {
+      "coin": "hbar",
+      "name": "Hedera",
+      "coingecko_id": "hedera-hashgraph",
+      "direction": "做空",
+      "signal": "空1",
+      "tranche": 1,
+      "tranche_pct": "20%",
+      "amount_usd": 100.0,
+      "entry_date": "2026-10-07",
+      "entry_price": 0.09284,
+      "qty": 1077.12193
+    },
+    {
+      "coin": "gram",
+      "name": "Gram (prev. Toncoin)",
+      "coingecko_id": "the-open-network",
+      "direction": "做空",
+      "signal": "空1",
+      "tranche": 1,
+      "tranche_pct": "20%",
+      "amount_usd": 100.0,
+      "entry_date": "2026-10-06",
+      "entry_price": 1.428,
+      "qty": 70.028011
+    },
+    {
+      "coin": "shib",
+      "name": "Shiba Inu",
+      "coingecko_id": "shiba-inu",
+      "direction": "做空",
+      "signal": "空1",
+      "tranche": 1,
+      "tranche_pct": "20%",
+      "amount_usd": 100.0,
+      "entry_date": "2026-10-07",
+      "entry_price": 5.435e-06,
+      "qty": 18399264.029439
     }
   ],
-  "closed": []
+  "closed": [
+    {
+      "coin": "ada",
+      "name": "Cardano",
+      "coingecko_id": "cardano",
+      "direction": "做多",
+      "signal": "入场1",
+      "tranche": 1,
+      "tranche_pct": "20%",
+      "amount_usd": 100,
+      "entry_date": "2026-10-05",
+      "entry_price": 0.2705,
+      "qty": 369.685767,
+      "exit_date": "2026-10-07",
+      "exit_price": 0.255621,
+      "exit_reason": "止损",
+      "pnl_usd": -5.5,
+      "pnl_pct": -5.5
+    },
+    {
+      "coin": "near",
+      "name": "NEAR Protocol",
+      "coingecko_id": "near",
+      "direction": "做空",
+      "signal": "空2",
+      "tranche": 1,
+      "tranche_pct": "20%",
+      "amount_usd": 100.0,
+      "entry_date": "2026-10-06",
+      "entry_price": 5.0723,
+      "qty": 19.714922,
+      "exit_date": "2026-10-07",
+      "exit_price": 5.3349,
+      "exit_reason": "止损",
+      "pnl_usd": -5.18,
+      "pnl_pct": -5.18
+    }
+  ]
 }
