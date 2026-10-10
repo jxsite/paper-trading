@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-09T00:19:46.388083+00:00",
+  "updated_at": "2026-10-10T00:20:00.666375+00:00",
   "note": "注次按该币种该方向实际买入顺序：第1注20%/$100，第2注50%/$250，第3注20%/$100，第4注10%/$50；做空为模拟卖空，不含手续费",
   "open": [
     {
@@ -14,11 +14,12 @@
       "entry_date": "2026-10-05",
       "entry_price": 0.2154,
       "qty": 464.252553,
-      "last_price": 0.192384,
-      "last_price_at": "2026-10-08T23:55:42Z",
-      "unrealized_pnl": 10.69,
-      "stop_price": 0.228324,
-      "stop_status": "正常"
+      "last_price": 0.194584,
+      "last_price_at": "2026-10-10T00:01:20Z",
+      "unrealized_pnl": 9.66,
+      "stop_price": 0.2154,
+      "stop_status": "正常",
+      "stop_tier": 1
     },
     {
       "coin": "ltc",
@@ -32,11 +33,12 @@
       "entry_date": "2026-10-05",
       "entry_price": 70.1,
       "qty": 1.426534,
-      "last_price": 63.2,
-      "last_price_at": "2026-10-08T23:55:42Z",
-      "unrealized_pnl": 9.84,
-      "stop_price": 74.306,
-      "stop_status": "正常"
+      "last_price": 63.46,
+      "last_price_at": "2026-10-10T00:01:20Z",
+      "unrealized_pnl": 9.47,
+      "stop_price": 70.1,
+      "stop_status": "正常",
+      "stop_tier": 1
     },
     {
       "coin": "bch",
@@ -50,11 +52,12 @@
       "entry_date": "2026-10-06",
       "entry_price": 311.92,
       "qty": 0.320595,
-      "last_price": 271.37,
-      "last_price_at": "2026-10-08T23:55:42Z",
-      "unrealized_pnl": 13.0,
-      "stop_price": 330.6352,
-      "stop_status": "正常"
+      "last_price": 276.39,
+      "last_price_at": "2026-10-10T00:01:20Z",
+      "unrealized_pnl": 11.39,
+      "stop_price": 293.2048,
+      "stop_status": "正常",
+      "stop_tier": 2
     },
     {
       "coin": "eth",
@@ -68,11 +71,12 @@
       "entry_date": "2026-10-07",
       "entry_price": 2572.75,
       "qty": 0.038869,
-      "last_price": 2472.02,
-      "last_price_at": "2026-10-08T23:55:42Z",
-      "unrealized_pnl": 3.92,
-      "stop_price": 2727.115,
-      "stop_status": "正常"
+      "last_price": 2485.64,
+      "last_price_at": "2026-10-10T00:01:20Z",
+      "unrealized_pnl": 3.39,
+      "stop_price": 2727.1150000000002,
+      "stop_status": "正常",
+      "stop_tier": 0
     },
     {
       "coin": "xrp",
@@ -86,11 +90,12 @@
       "entry_date": "2026-10-07",
       "entry_price": 1.42082,
       "qty": 70.381892,
-      "last_price": 1.38,
-      "last_price_at": "2026-10-08T23:55:42Z",
-      "unrealized_pnl": 2.87,
+      "last_price": 1.39,
+      "last_price_at": "2026-10-10T00:01:20Z",
+      "unrealized_pnl": 2.17,
       "stop_price": 1.5060692,
-      "stop_status": "正常"
+      "stop_status": "正常",
+      "stop_tier": 0
     },
     {
       "coin": "sol",
@@ -104,11 +109,12 @@
       "entry_date": "2026-10-07",
       "entry_price": 116.25,
       "qty": 0.860215,
-      "last_price": 109.59,
-      "last_price_at": "2026-10-08T23:55:42Z",
-      "unrealized_pnl": 5.73,
-      "stop_price": 123.225,
-      "stop_status": "正常"
+      "last_price": 109.06,
+      "last_price_at": "2026-10-10T00:01:20Z",
+      "unrealized_pnl": 6.18,
+      "stop_price": 116.25,
+      "stop_status": "正常",
+      "stop_tier": 1
     },
     {
       "coin": "doge",
@@ -122,29 +128,12 @@
       "entry_date": "2026-10-07",
       "entry_price": 0.0889862,
       "qty": 1123.769753,
-      "last_price": 0.084154,
-      "last_price_at": "2026-10-08T23:55:42Z",
-      "unrealized_pnl": 5.43,
-      "stop_price": 0.09432537,
-      "stop_status": "正常"
-    },
-    {
-      "coin": "ada",
-      "name": "Cardano",
-      "coingecko_id": "cardano",
-      "direction": "做空",
-      "signal": "空2",
-      "tranche": 1,
-      "tranche_pct": "20%",
-      "amount_usd": 100.0,
-      "entry_date": "2026-10-07",
-      "entry_price": 0.255621,
-      "qty": 391.204166,
-      "last_price": 0.232449,
-      "last_price_at": "2026-10-08T23:55:42Z",
-      "unrealized_pnl": 9.06,
-      "stop_price": 0.27095826,
-      "stop_status": "正常"
+      "last_price": 0.085325,
+      "last_price_at": "2026-10-10T00:01:20Z",
+      "unrealized_pnl": 4.11,
+      "stop_price": 0.094325372,
+      "stop_status": "正常",
+      "stop_tier": 0
     },
     {
       "coin": "xlm",
@@ -158,11 +147,12 @@
       "entry_date": "2026-10-07",
       "entry_price": 0.200311,
       "qty": 1248.059268,
-      "last_price": 0.192384,
-      "last_price_at": "2026-10-08T23:55:42Z",
-      "unrealized_pnl": 9.89,
+      "last_price": 0.194584,
+      "last_price_at": "2026-10-10T00:01:20Z",
+      "unrealized_pnl": 7.15,
       "stop_price": 0.21232966,
-      "stop_status": "正常"
+      "stop_status": "正常",
+      "stop_tier": 0
     },
     {
       "coin": "ltc",
@@ -176,11 +166,12 @@
       "entry_date": "2026-10-07",
       "entry_price": 66.08,
       "qty": 3.783293,
-      "last_price": 63.2,
-      "last_price_at": "2026-10-08T23:55:42Z",
-      "unrealized_pnl": 10.9,
+      "last_price": 63.46,
+      "last_price_at": "2026-10-10T00:01:20Z",
+      "unrealized_pnl": 9.91,
       "stop_price": 70.0448,
-      "stop_status": "正常"
+      "stop_status": "正常",
+      "stop_tier": 0
     },
     {
       "coin": "uni",
@@ -194,11 +185,12 @@
       "entry_date": "2026-10-07",
       "entry_price": 7.9074,
       "qty": 12.646382,
-      "last_price": 7.17,
-      "last_price_at": "2026-10-08T23:55:42Z",
-      "unrealized_pnl": 9.33,
-      "stop_price": 8.381844,
-      "stop_status": "正常"
+      "last_price": 7.32,
+      "last_price_at": "2026-10-10T00:01:20Z",
+      "unrealized_pnl": 7.43,
+      "stop_price": 7.9074,
+      "stop_status": "正常",
+      "stop_tier": 1
     },
     {
       "coin": "avax",
@@ -212,11 +204,12 @@
       "entry_date": "2026-10-07",
       "entry_price": 11.129,
       "qty": 8.985533,
-      "last_price": 10.09,
-      "last_price_at": "2026-10-08T23:55:42Z",
-      "unrealized_pnl": 9.34,
-      "stop_price": 11.79674,
-      "stop_status": "正常"
+      "last_price": 10.33,
+      "last_price_at": "2026-10-10T00:01:20Z",
+      "unrealized_pnl": 7.18,
+      "stop_price": 11.129,
+      "stop_status": "正常",
+      "stop_tier": 1
     },
     {
       "coin": "hbar",
@@ -230,29 +223,12 @@
       "entry_date": "2026-10-07",
       "entry_price": 0.09284,
       "qty": 1077.12193,
-      "last_price": 0.090678,
-      "last_price_at": "2026-10-08T23:55:42Z",
-      "unrealized_pnl": 2.33,
-      "stop_price": 0.0984104,
-      "stop_status": "正常"
-    },
-    {
-      "coin": "gram",
-      "name": "Gram (prev. Toncoin)",
-      "coingecko_id": "the-open-network",
-      "direction": "做空",
-      "signal": "空1",
-      "tranche": 1,
-      "tranche_pct": "20%",
-      "amount_usd": 100.0,
-      "entry_date": "2026-10-06",
-      "entry_price": 1.428,
-      "qty": 70.028011,
-      "last_price": 1.38,
-      "last_price_at": "2026-10-08T23:55:42Z",
-      "unrealized_pnl": 3.36,
-      "stop_price": 1.51368,
-      "stop_status": "正常"
+      "last_price": 0.092235,
+      "last_price_at": "2026-10-10T00:01:20Z",
+      "unrealized_pnl": 0.65,
+      "stop_price": 0.09841040000000001,
+      "stop_status": "正常",
+      "stop_tier": 0
     },
     {
       "coin": "shib",
@@ -266,11 +242,12 @@
       "entry_date": "2026-10-07",
       "entry_price": 5.435e-06,
       "qty": 18399264.029439,
-      "last_price": 5.3e-06,
-      "last_price_at": "2026-10-08T23:55:42Z",
-      "unrealized_pnl": 2.48,
-      "stop_price": 5.76e-06,
-      "stop_status": "正常"
+      "last_price": 5.46e-06,
+      "last_price_at": "2026-10-10T00:01:20Z",
+      "unrealized_pnl": -0.46,
+      "stop_price": 5.7611e-06,
+      "stop_status": "正常",
+      "stop_tier": 0
     },
     {
       "coin": "btc",
@@ -283,7 +260,13 @@
       "amount_usd": 100.0,
       "entry_date": "2026-10-08",
       "entry_price": 81683.8,
-      "qty": 0.001224
+      "qty": 0.001224,
+      "last_price": 82563,
+      "last_price_at": "2026-10-10T00:01:20Z",
+      "unrealized_pnl": -1.08,
+      "stop_price": 86584.82800000001,
+      "stop_status": "正常",
+      "stop_tier": 0
     },
     {
       "coin": "eth",
@@ -296,7 +279,13 @@
       "amount_usd": 250.0,
       "entry_date": "2026-10-08",
       "entry_price": 2472.9,
-      "qty": 0.101096
+      "qty": 0.101096,
+      "last_price": 2485.64,
+      "last_price_at": "2026-10-10T00:01:20Z",
+      "unrealized_pnl": -1.29,
+      "stop_price": 2621.2740000000003,
+      "stop_status": "正常",
+      "stop_tier": 0
     },
     {
       "coin": "bnb",
@@ -309,7 +298,13 @@
       "amount_usd": 100.0,
       "entry_date": "2026-10-08",
       "entry_price": 735.23,
-      "qty": 0.136012
+      "qty": 0.136012,
+      "last_price": 741.83,
+      "last_price_at": "2026-10-10T00:01:20Z",
+      "unrealized_pnl": -0.9,
+      "stop_price": 779.3438000000001,
+      "stop_status": "正常",
+      "stop_tier": 0
     },
     {
       "coin": "zec",
@@ -322,7 +317,13 @@
       "amount_usd": 100.0,
       "entry_date": "2026-10-08",
       "entry_price": 1185.26,
-      "qty": 0.08437
+      "qty": 0.08437,
+      "last_price": 1205.17,
+      "last_price_at": "2026-10-10T00:01:20Z",
+      "unrealized_pnl": -1.68,
+      "stop_price": 1256.3756,
+      "stop_status": "正常",
+      "stop_tier": 0
     },
     {
       "coin": "hype",
@@ -335,7 +336,13 @@
       "amount_usd": 100.0,
       "entry_date": "2026-10-08",
       "entry_price": 84.16,
-      "qty": 1.188213
+      "qty": 1.188213,
+      "last_price": 84.15,
+      "last_price_at": "2026-10-10T00:01:20Z",
+      "unrealized_pnl": 0.01,
+      "stop_price": 89.2096,
+      "stop_status": "正常",
+      "stop_tier": 0
     },
     {
       "coin": "doge",
@@ -348,7 +355,13 @@
       "amount_usd": 250.0,
       "entry_date": "2026-10-08",
       "entry_price": 0.0839833,
-      "qty": 2976.782289
+      "qty": 2976.782289,
+      "last_price": 0.085325,
+      "last_price_at": "2026-10-10T00:01:20Z",
+      "unrealized_pnl": -3.99,
+      "stop_price": 0.089022298,
+      "stop_status": "正常",
+      "stop_tier": 0
     },
     {
       "coin": "wbt",
@@ -361,7 +374,13 @@
       "amount_usd": 100.0,
       "entry_date": "2026-10-08",
       "entry_price": 80.36,
-      "qty": 1.2444
+      "qty": 1.2444,
+      "last_price": 81.16,
+      "last_price_at": "2026-10-10T00:01:20Z",
+      "unrealized_pnl": -1.0,
+      "stop_price": 85.1816,
+      "stop_status": "正常",
+      "stop_tier": 0
     },
     {
       "coin": "link",
@@ -374,20 +393,13 @@
       "amount_usd": 100.0,
       "entry_date": "2026-10-08",
       "entry_price": 12.69023,
-      "qty": 7.880078
-    },
-    {
-      "coin": "ada",
-      "name": "Cardano",
-      "coingecko_id": "cardano",
-      "direction": "做空",
-      "signal": "空1",
-      "tranche": 2,
-      "tranche_pct": "50%",
-      "amount_usd": 250.0,
-      "entry_date": "2026-10-08",
-      "entry_price": 0.232109,
-      "qty": 1077.080165
+      "qty": 7.880078,
+      "last_price": 12.8,
+      "last_price_at": "2026-10-10T00:01:20Z",
+      "unrealized_pnl": -0.86,
+      "stop_price": 13.451643800000001,
+      "stop_status": "正常",
+      "stop_tier": 0
     },
     {
       "coin": "xlm",
@@ -400,20 +412,13 @@
       "amount_usd": 100.0,
       "entry_date": "2026-10-08",
       "entry_price": 0.19189,
-      "qty": 521.131898
-    },
-    {
-      "coin": "near",
-      "name": "NEAR Protocol",
-      "coingecko_id": "near",
-      "direction": "做空",
-      "signal": "空1",
-      "tranche": 1,
-      "tranche_pct": "20%",
-      "amount_usd": 100.0,
-      "entry_date": "2026-10-08",
-      "entry_price": 4.4595,
-      "qty": 22.424039
+      "qty": 521.131898,
+      "last_price": 0.194584,
+      "last_price_at": "2026-10-10T00:01:20Z",
+      "unrealized_pnl": -1.4,
+      "stop_price": 0.2034034,
+      "stop_status": "正常",
+      "stop_tier": 0
     },
     {
       "coin": "bch",
@@ -426,7 +431,13 @@
       "amount_usd": 250.0,
       "entry_date": "2026-10-08",
       "entry_price": 271.14,
-      "qty": 0.922033
+      "qty": 0.922033,
+      "last_price": 276.39,
+      "last_price_at": "2026-10-10T00:01:20Z",
+      "unrealized_pnl": -4.84,
+      "stop_price": 287.4084,
+      "stop_status": "正常",
+      "stop_tier": 0
     },
     {
       "coin": "ltc",
@@ -439,7 +450,13 @@
       "amount_usd": 100.0,
       "entry_date": "2026-10-08",
       "entry_price": 63.12,
-      "qty": 1.584284
+      "qty": 1.584284,
+      "last_price": 63.46,
+      "last_price_at": "2026-10-10T00:01:20Z",
+      "unrealized_pnl": -0.54,
+      "stop_price": 66.9072,
+      "stop_status": "正常",
+      "stop_tier": 0
     },
     {
       "coin": "sui",
@@ -452,7 +469,13 @@
       "amount_usd": 100.0,
       "entry_date": "2026-10-08",
       "entry_price": 1.04,
-      "qty": 96.153846
+      "qty": 96.153846,
+      "last_price": 1.069,
+      "last_price_at": "2026-10-10T00:01:20Z",
+      "unrealized_pnl": -2.79,
+      "stop_price": 1.1024,
+      "stop_status": "正常",
+      "stop_tier": 0
     },
     {
       "coin": "tao",
@@ -465,7 +488,78 @@
       "amount_usd": 100.0,
       "entry_date": "2026-10-08",
       "entry_price": 268.0552,
-      "qty": 0.373057
+      "qty": 0.373057,
+      "last_price": 274.93,
+      "last_price_at": "2026-10-10T00:01:20Z",
+      "unrealized_pnl": -2.56,
+      "stop_price": 284.13851200000005,
+      "stop_status": "正常",
+      "stop_tier": 0
+    },
+    {
+      "coin": "trx",
+      "name": "TRON",
+      "coingecko_id": "tron",
+      "direction": "做空",
+      "signal": "空1",
+      "tranche": 1,
+      "tranche_pct": "20%",
+      "amount_usd": 100.0,
+      "entry_date": "2026-10-09",
+      "entry_price": 0.331647,
+      "qty": 301.525417
+    },
+    {
+      "coin": "xmr",
+      "name": "Monero",
+      "coingecko_id": "monero",
+      "direction": "做空",
+      "signal": "空1",
+      "tranche": 1,
+      "tranche_pct": "20%",
+      "amount_usd": 100.0,
+      "entry_date": "2026-10-09",
+      "entry_price": 518.66,
+      "qty": 0.192805
+    },
+    {
+      "coin": "ada",
+      "name": "Cardano",
+      "coingecko_id": "cardano",
+      "direction": "做多",
+      "signal": "入场2",
+      "tranche": 1,
+      "tranche_pct": "20%",
+      "amount_usd": 100.0,
+      "entry_date": "2026-10-09",
+      "entry_price": 0.242953,
+      "qty": 411.602244
+    },
+    {
+      "coin": "near",
+      "name": "NEAR Protocol",
+      "coingecko_id": "near",
+      "direction": "做多",
+      "signal": "入场2",
+      "tranche": 1,
+      "tranche_pct": "20%",
+      "amount_usd": 100.0,
+      "entry_date": "2026-10-09",
+      "entry_price": 4.8864,
+      "qty": 20.464964
+    },
+    {
+      "coin": "cc",
+      "name": "Canton",
+      "coingecko_id": "canton-network",
+      "direction": "做多",
+      "signal": "入场2",
+      "tranche": 1,
+      "tranche_pct": "20%",
+      "amount_usd": 100.0,
+      "entry_date": "2026-10-09",
+      "entry_price": 0.12283,
+      "qty": 814.133355
     }
   ],
   "closed": [
@@ -527,12 +621,108 @@
       "exit_reason": "止损",
       "pnl_usd": -4.03,
       "pnl_pct": -4.03
+    },
+    {
+      "coin": "near",
+      "name": "NEAR Protocol",
+      "coingecko_id": "near",
+      "direction": "做空",
+      "signal": "空1",
+      "tranche": 1,
+      "tranche_pct": "20%",
+      "amount_usd": 100.0,
+      "entry_date": "2026-10-08",
+      "entry_price": 4.4595,
+      "qty": 22.424039,
+      "last_price": 4.87,
+      "last_price_at": "2026-10-09T07:56:01Z",
+      "unrealized_pnl": -9.21,
+      "stop_price": 4.72707,
+      "stop_status": "已穿破（待日线确认），超止损线3.02%",
+      "exit_date": "2026-10-09",
+      "exit_price": 4.86,
+      "exit_reason": "止损",
+      "pnl_usd": -8.98,
+      "pnl_pct": -8.98,
+      "note": "用户2026-10-09指示：盘中止损穿破立即平仓（每小时监控），不等日线"
+    },
+    {
+      "coin": "gram",
+      "name": "Gram (prev. Toncoin)",
+      "coingecko_id": "the-open-network",
+      "direction": "做空",
+      "signal": "空1",
+      "tranche": 1,
+      "tranche_pct": "20%",
+      "amount_usd": 100.0,
+      "entry_date": "2026-10-06",
+      "entry_price": 1.428,
+      "qty": 70.028011,
+      "last_price": 1.45,
+      "last_price_at": "2026-10-10T00:01:20Z",
+      "unrealized_pnl": -1.54,
+      "stop_price": 1.51368,
+      "stop_status": "正常",
+      "stop_tier": 0,
+      "exit_date": "2026-10-08",
+      "exit_price": 1.471,
+      "exit_reason": "止损",
+      "pnl_usd": -3.01,
+      "pnl_pct": -3.01
+    },
+    {
+      "coin": "ada",
+      "name": "Cardano",
+      "coingecko_id": "cardano",
+      "direction": "做空",
+      "signal": "空2",
+      "tranche": 1,
+      "tranche_pct": "20%",
+      "amount_usd": 100.0,
+      "entry_date": "2026-10-07",
+      "entry_price": 0.255621,
+      "qty": 391.204166,
+      "last_price": 0.242923,
+      "last_price_at": "2026-10-10T00:01:20Z",
+      "unrealized_pnl": 4.97,
+      "stop_price": 0.255621,
+      "stop_status": "正常",
+      "stop_tier": 1,
+      "exit_date": "2026-10-09",
+      "exit_price": 0.242953,
+      "exit_reason": "趋势清仓",
+      "pnl_usd": 4.96,
+      "pnl_pct": 4.96
+    },
+    {
+      "coin": "ada",
+      "name": "Cardano",
+      "coingecko_id": "cardano",
+      "direction": "做空",
+      "signal": "空1",
+      "tranche": 2,
+      "tranche_pct": "50%",
+      "amount_usd": 250.0,
+      "entry_date": "2026-10-08",
+      "entry_price": 0.232109,
+      "qty": 1077.080165,
+      "last_price": 0.242923,
+      "last_price_at": "2026-10-10T00:01:20Z",
+      "unrealized_pnl": -11.65,
+      "stop_price": 0.24603554000000002,
+      "stop_status": "正常",
+      "stop_tier": 0,
+      "exit_date": "2026-10-09",
+      "exit_price": 0.242953,
+      "exit_reason": "趋势清仓",
+      "pnl_usd": -11.68,
+      "pnl_pct": -4.67
     }
   ],
   "summary": {
-    "open_count": 16,
-    "total_unrealized_pnl_usd": 104.2,
-    "price_snapshot_at": "2026-10-08T23:55:42Z",
+    "open_count": 29,
+    "total_unrealized_pnl_usd": 47.09,
+    "price_snapshot_at": "2026-10-10T00:01:20Z",
     "source": "CoinGecko simple/price"
   }
 }
